@@ -1,9 +1,15 @@
 /*OMDB Styling starts*/
 
+/*Article styling*/
+#lights-camera-action {
+    background-color: #8c8c8c;
+}
+
 /*OMDB h1 element styling*/
 #movie {
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 2.8125em;
+    text-decoration: underline;
 }
 
 /*OMDB h2 element styling*/
@@ -17,14 +23,13 @@ font-size: l.25em;
 margin-left: 0.625em;
 }
 
-/*Search button styling*/
-#search {
+/*Search and Reset buttons styling*/
+#search, #clear {
     font-size: 1.125em;
+    border-radius: 0.3125em;
 }
 
-/*Reset button styling*/
-#clear {
-    font-size: 1.125em;
-}
+
+
 
 /*OMDB styling ends*/
