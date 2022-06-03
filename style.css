@@ -2,7 +2,16 @@
 
 /*Article styling*/
 #lights-camera-action {
-    background-color: #8c8c8c;
+    background-color: #4d94ff;
+    margin: 1.25em;
+    padding: 0.3125em;
+    border: 0.625em groove #737373;
+}
+
+label {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 0.9375em;
 }
 
 /*OMDB h1 element styling*/
@@ -14,8 +23,13 @@
 
 /*OMDB h2 element styling*/
 #title {
-font-weight: bold;
+font-weight:lighter;
 font-size: l.25em;
+}
+
+#enter-title, #year, #plot-choices, #response {
+    font-weight: bold;
+    font-size: 0.9375em;
 }
 
 /*styling for icons in Search and Reset buttons*/
