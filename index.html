@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Movie Nerds</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-     <!--header-->  
 
-     <!--OMDB-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Movie Nerds</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Materialize stylesheet-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Custom stylesheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-     <!--Google Maps-->
-        
-        <script src="script.js"></script>
-    </body>
+<body>
+    <!--header-->
+
+    <!--OMDB-->
+    <article>
+        <h1>The Open Movie Database (OMDB)</h1>
+        <br>
+        <form id="search-by-title-form">
+            <fieldset>
+                <legend>By Title</legend>
+            </fieldset>
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" id="title">
+            </div>
+        </form>
+
+
+
+    </article>
+    <!--Google Maps-->
+
+    <script src="script.js"></script>
+</body>
+
 </html>
