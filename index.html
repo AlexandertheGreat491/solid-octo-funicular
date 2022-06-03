@@ -10,6 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Materialize stylesheet-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Font Awesome stylesheet-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Custom stylesheet-->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -48,8 +52,10 @@
                         <input placeholder="Enter JSON or XML" id="response" type="text" class="validate">
                     </div>
                 </div>
-                <button id="search-by-title-button" type="button">Search</button>
-                <button id="search-by-title-reset" type="reset">Reset</button>
+                <button class="btn waves-effect waves-light btn-small" type="submit" name="action" id="search">Search<i
+                        class="fa-solid fa-play" id="play"></i></button>
+                <button class="btn waves-effect waves-light btn-small" type="reset" id="clear">Reset<i
+                        class="fa-solid fa-backward" id="rewind"></i></button>
         </div>
         </div>
         </form>

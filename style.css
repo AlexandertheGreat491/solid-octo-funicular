@@ -1,9 +1,30 @@
+/*OMDB Styling starts*/
+
+/*OMDB h1 element styling*/
 #movie {
     font-weight: bold;
     font-size: 2.5em;
 }
 
+/*OMDB h2 element styling*/
 #title {
 font-weight: bold;
 font-size: l.25em;
 }
+
+/*styling for icons in Search and Reset buttons*/
+#play, #rewind {
+margin-left: 0.625em;
+}
+
+/*Search button styling*/
+#search {
+    font-size: 1.125em;
+}
+
+/*Reset button styling*/
+#clear {
+    font-size: 1.125em;
+}
+
+/*OMDB styling ends*/
