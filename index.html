@@ -19,41 +19,45 @@
 
     <!--OMDB-->
     <article>
-        <h1>The Open Movie Database (OMDB)</h1>
+        <h1 id="movie">The Open Movie Database (OMDB)</h1>
         <br>
-        <form id="search-by-title-form">
-            <fieldset>
-                <legend>By Title</legend>
-            </fieldset>
-            <div>
-                <label for="title">Title:</label>
-                <input type="text" id="title">
-                "&nbsp;&nbsp;"
-                <label for="year">Year:</label>
-                <input type="text" id="year" name="y">
-                "&nbsp;&nbsp;"
-                <label>Plot:</label>
-                <select name="plot">
-                    <option value selected>Short</option>
-                    <option value="full">Full</option>
-                </select>
-                "&nbsp;&nbsp;"
-                <label>Response:</label>
-                <select name="r">
-                    <option value>JSON</option>
-                    <option value="xml">XML</option>
-                </select>
-                "&nbsp;&nbsp;"
+        <div class="row">
+            <form id="search-by-title-form" class="col s12">
+                <h2 id="title">By Title</h2>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <label for="title">Title:</label>
+                        <p></p>
+                        <input placeholder="Enter movie title here" id="title" type="text" class="validate">
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="year">Year:</label>
+                        <p></p>
+                        <input placeholder="Enter the year of the movie" id="year" type="text" class="validate">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <label for="plot-choices">Plot:</label>
+                        <p></p>
+                        <input placeholder="Enter Short or Full" id="plot-choices" type="text" class="validate">
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="response">Response</label>
+                        <p></p>
+                        <input placeholder="Enter JSON or XML" id="response" type="text" class="validate">
+                    </div>
+                </div>
                 <button id="search-by-title-button" type="button">Search</button>
                 <button id="search-by-title-reset" type="reset">Reset</button>
-            </div>
+        </div>
+        </div>
         </form>
-
-
-
     </article>
     <!--Google Maps-->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 
