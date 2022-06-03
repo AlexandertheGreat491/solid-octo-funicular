@@ -22,23 +22,23 @@ label {
 }
 
 /*OMDB h2 element styling*/
-#title {
+#subheader, #search-results, #pretty {
 font-weight:lighter;
 font-size: l.25em;
 }
 
-#enter-title, #year, #plot-choices, #response {
+#enter-title, #year, #plot, #response {
     font-weight: bold;
     font-size: 0.9375em;
 }
 
 /*styling for icons in Search and Reset buttons*/
-#play, #rewind {
+#play-button, #rewind {
 margin-left: 0.625em;
 }
 
 /*Search and Reset buttons styling*/
-#search, #clear {
+#submit, #clear {
     font-size: 1.125em;
     border-radius: 0.3125em;
 }
