@@ -1,51 +1,45 @@
 /*OMDB js*/
 // Global variables
 var userForm = document.querySelector('#user-form');
-var movieTitle = document.querySelector('#enter-title');
+var movieTitleEl = document.querySelector('#enter-title');
 var movieYear = document.querySelector('#year');
 var moviePlot = document.querySelector('#plot-choice');
 var responseType = document.querySelector('#response');
 var moviesContainerEl = document.querySelector('#movies-container');
 var movieSearchTerm = document.querySelector('#movie-search-term');
+var submitButtonEl = document.querySelector('#submit');
+var errorMessageEl = document.createElement("p");
 
-var sumbitSearchHandler = function (event){
+var sumbitSearchHandler = function (event) {
     event.preventDefault();
 
-    var enterTitle = movieTitle.value.trim();
+    var movieTitleValue = movieTitleEl.value.trim();
     var mYear = movieYear.value.trim();
     var mPlot = moviePlot.value.trim();
     var mResponse = responseType.value.trim();
 
-    if (enter-title) {
-        getUserMovies(enter-title);
-
+    if (movieTitleValue) {
+        getUserMovies(movieTitleValue);
+        moviesContainerEl.textContent = '';
+        movieTitleValue.value = '';
+        errorMessageEl.textContent = '';
+    } else {
+        //console.log("errorhere");
+        errorMessageEl.textContent = 'Please enter a valid movie title';
+        moviesContainerEl.appendChild(errorMessageEl);
     }
 
 }
-// Batman
-
-var requestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Batman&plot=full";
-
-fetch(requestUrl)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-  });
 
 
-// Joker
-var requestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Joker&plot=full";
+//getUserMovies
+var getUserMovies = function() {
 
-fetch(requestUrl)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-  });
+}
 
+
+// Submit button event listener
+submitButtonEl.addEventListener('click', sumbitSearchHandler);
 
 
 
