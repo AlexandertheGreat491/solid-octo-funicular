@@ -6,6 +6,7 @@
     margin: 1.25em;
     padding: 0.3125em;
     border: 0.625em groove #737373;
+    border-radius: 0.3125em; 
 }
 
 label {
