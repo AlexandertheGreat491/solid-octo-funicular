@@ -6,6 +6,10 @@ var movieYear = document.querySelector('#year');
 var moviePlot = document.querySelector('#plot-choice');
 var responseType = document.querySelector('#response');
 
+
+var sumbitSearchHandler = function (event){
+    
+}
 // Batman
 
 var requestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Batman&plot=full";
