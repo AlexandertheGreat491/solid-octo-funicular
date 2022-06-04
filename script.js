@@ -7,8 +7,8 @@ document.getElementById("getForm").addEventListener("submit", function(event){
 });
 
 function loadMovies(name) {
-    var omdbAPI = newXMLHttpRequest();
-    var omdbURL = ("http://www.omdbapi.com/?apikey=5385144e&t" + title + "&y=" + year + "&plot=short&r=json");
+    var omdbAPI = new XMLHttpRequest();
+    var omdbURL = 'http://www.omdbapi.com/?apikey=5385144e&t=${name.replace(" ", "%20")}&type=movie';
     omdbAPI.open("get", omdbURL, true);
     omdbAPI.onload = function(event) {
         event.preventDefault();
