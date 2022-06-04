@@ -29,47 +29,54 @@
             <form id="user-form" class="col s12 m6">
                 <h2 id="subheader">By Title:</h2>
                 <div class="row">
-                        <div class="input-field col s6">
-                            <label for="enter-title">Title:</label>
-                            <p></p>
-                            <br>
-                            <input placeholder="Enter movie title here" id="enter-title" type="text" class="validate" name="query">
-                        </div>
-                        <div class="input-field col s6">
-                            <label for="year">Year:</label>
-                            <p></p>
-                            <br>
-                            <input placeholder="Enter the year of the movie" id="year" type="text" class="validate">
-                        </div>
+                    <div class="input-field col s6">
+                        <label for="enter-title">Title:</label>
+                        <p></p>
+                        <br>
+                        <input placeholder="Enter movie title here" id="enter-title" name="enter-title" type="text"
+                            class="validate" name="query">
                     </div>
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <label for="plot-choice">Plot:</label>
-                            <p></p>
-                            <br>
-                            <input placeholder="Enter Short or Full" id="plot-choice" type="text" class="validate">
-                        </div>
-                        <div class="input-field col s6">
-                            <label for="response">Response</label>
-                            <p></p>
-                            <br>
-                            <input placeholder="Enter JSON or XML" id="response" type="text" class="validate">
-                        </div>
+                    <div class="input-field col s6">
+                        <label for="year">Year:</label>
+                        <p></p>
+                        <br>
+                        <input placeholder="Enter the year of the movie" id="year" name="year" type="text"
+                            class="validate">
                     </div>
-                    
-                    <button class="btn waves-effect waves-light btn-small btn modal-trigger" type="submit" name="action"
-                        id="submit">Submit<i class="fa-solid fa-play" id="play-button"></i></button>
-                    <button class="btn waves-effect waves-light btn-small" type="reset" id="clear">Reset<i
-                            class="fa-solid fa-backward" id="rewind"></i></button>
-
                 </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <label for="plot-choice">Plot:</label>
+                        <p></p>
+                        <br>
+                        <input placeholder="Enter Short or Full" id="plot-choice" name="plot-choice" type="text"
+                            class="validate">
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="response">Response</label>
+                        <p></p>
+                        <br>
+                        <input placeholder="Enter JSON or XML" id="response" name="response" type="text"
+                            class="validate">
+                    </div>
+                </div>
+
+                <button class="btn waves-effect waves-light btn-small btn modal-trigger" type="submit" name="action"
+                    id="submit">Submit<i class="fa-solid fa-play" id="play-button"></i></button>
+                <button class="btn waves-effect waves-light btn-small" type="reset" id="clear">Reset<i
+                        class="fa-solid fa-backward" id="rewind"></i></button>
+
+        </div>
         </div>
         </div>
         </form>
-   <div id="#results">
-       <h2>View Results</h2>
-
-   </div>
+        <!--User search results will display below.-->
+        <div>
+            <h2>
+                Showing Movie Results for: <span id="movie-search-term"></span>
+            </h2>
+<div id="movies-container"></div>
+        </div>
 
     </article>
     <!--Google Maps-->

@@ -5,10 +5,22 @@ var movieTitle = document.querySelector('#enter-title');
 var movieYear = document.querySelector('#year');
 var moviePlot = document.querySelector('#plot-choice');
 var responseType = document.querySelector('#response');
-
+var moviesContainerEl = document.querySelector('#movies-container');
+var movieSearchTerm = document.querySelector('#movie-search-term');
 
 var sumbitSearchHandler = function (event){
-    
+    event.preventDefault();
+
+    var enterTitle = movieTitle.value.trim();
+    var mYear = movieYear.value.trim();
+    var mPlot = moviePlot.value.trim();
+    var mResponse = responseType.value.trim();
+
+    if (enter-title) {
+        getUserMovies(enter-title);
+
+    }
+
 }
 // Batman
 
