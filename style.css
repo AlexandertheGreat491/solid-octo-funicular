@@ -22,7 +22,7 @@ label {
 }
 
 /*OMDB h2 element styling*/
-#subheader, #search-results, #pretty {
+#subheader, #results {
 font-weight:lighter;
 font-size: l.25em;
 }
