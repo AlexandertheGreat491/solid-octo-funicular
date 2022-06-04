@@ -22,7 +22,7 @@ label {
 }
 
 /*OMDB h2 element styling*/
-#subheader, #results {
+#subheader {
 font-weight:lighter;
 font-size: l.25em;
 }
@@ -32,18 +32,22 @@ font-size: l.25em;
     font-size: 0.9375em;
 }
 
-/*styling for icons in Search and Reset buttons*/
+/* Styling for icons in Search and Reset buttons*/
 #play-button, #rewind {
 margin-left: 0.625em;
 }
 
-/*Search and Reset buttons styling*/
+/* Search and Reset buttons styling*/
 #submit, #clear {
     font-size: 1.125em;
     border-radius: 0.3125em;
 }
 
-
+/* Styling for the div where user search results will display */
+#results {
+    font-weight: lighter;
+    font-size: 0.9375em;
+}
 
 
 /*OMDB styling ends*/
