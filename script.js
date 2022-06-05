@@ -67,6 +67,21 @@ response.json().then(function(data){
 });
 };
 
+var getUserMovies = function(moviePlotValue) {
+var myapiUrl = "http://www.omdbapi.com/?apikey5385144e&plot + plot + short + full"
+fetch(myapiUrl).then(function (response){
+    if (response.ok) {
+        console.log(response);
+        response.json().then(function(data){
+            console.log(data);
+            displayMovies(data.items,moviePlotValue);
+                });
+    } else {
+        getUserMoviesErrorEl.textContent = 'Sorry, we were unable to retrieve your search results.'
+    }
+})
+}
+
 
 //var displayMovies = function(movieTitleValue) {
 
