@@ -23,21 +23,21 @@
 
     <!--OMDB-->
     <article id="lights-camera-action">
-        <h1 id="movie">The Open Movie Database (OMDB)</h1>
+        <h1 id="movie" class="z-depth-4 grey lighten-2">The Open Movie Database (OMDB)</h1>
         <br>
         <div class="row">
             <form id="user-form" class="col s12 m6">
-                <h2 id="subheader">By Title:</h2>
+                <h2 class="z-depth-3 grey lighten-2" id="subheader">By Title:</h2>
                 <div class="row">
                     <div class="input-field col s6">
-                        <label for="enter-title">Title:</label>
+                        <label for="enter-title" class="z-depth-1 grey lighten-2">Title:</label>
                         <p></p>
                         <br>
                         <input placeholder="Enter movie title here" id="enter-title" name="enter-title" type="text"
                             class="validate" name="query">
                     </div>
                     <div class="input-field col s6">
-                        <label for="year">Year:</label>
+                        <label for="year" class="z-depth-1 grey lighten-2">Year:</label>
                         <p></p>
                         <br>
                         <input placeholder="Enter the year of the movie" id="year" name="year" type="text"
@@ -46,14 +46,14 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <label for="plot-choice">Plot:</label>
+                        <label for="plot-choice" class="z-depth-1 grey lighten-2">Plot:</label>
                         <p></p>
                         <br>
                         <input placeholder="Enter Short or Full" id="plot-choice" name="plot-choice" type="text"
                             class="validate">
                     </div>
                     <div class="input-field col s6">
-                        <label for="response">Response</label>
+                        <label for="response" class="z-depth-1 grey lighten-2">Response</label>
                         <p></p>
                         <br>
                         <input placeholder="Enter JSON or XML" id="response" name="response" type="text"
@@ -61,9 +61,9 @@
                     </div>
                 </div>
 
-                <button class="btn waves-effect waves-light btn-small btn modal-trigger" type="submit" name="action"
+                <button class="btn waves-effect waves-light btn-small btn modal-trigger z-depth-2" type="submit" name="action"
                     id="submit">Submit<i class="fa-solid fa-play" id="play-button"></i></button>
-                <button class="btn waves-effect waves-light btn-small" type="reset" id="clear">Reset<i
+                <button class="btn waves-effect waves-light btn-small z-depth-2" type="reset" id="clear">Reset<i
                         class="fa-solid fa-backward" id="rewind"></i></button>
 
         </div>
