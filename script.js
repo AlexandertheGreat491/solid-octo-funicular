@@ -2,9 +2,9 @@
 // Global variables
 var userForm = document.querySelector('#user-form');
 var movieTitleEl = document.querySelector('#enter-title');
-var movieYear = document.querySelector('#year');
-var moviePlot = document.querySelector('#plot-choice');
-var responseType = document.querySelector('#response');
+var movieYearEl = document.querySelector('#year');
+var moviePlotEl = document.querySelector('#plot-choice');
+var responseTypeEl = document.querySelector('#response');
 var moviesContainerEl = document.querySelector('#movies-container');
 var movieSearchTerm = document.querySelector('#movie-search-term');
 var submitButtonEl = document.querySelector('#submit');
@@ -15,9 +15,9 @@ var sumbitSearchHandler = function (event) {
     event.preventDefault();
 
     var movieTitleValue = movieTitleEl.value.trim();
-    var mYear = movieYear.value.trim();
-    var mPlot = moviePlot.value.trim();
-    var mResponse = responseType.value.trim();
+    var movieYearValue = movieYearEl.value.trim();
+    var moviePlotValue = moviePlotEl.value.trim();
+    var responseTypeValue = responseTypeEl.value.trim();
 
     if (movieTitleValue) {
         getUserMovies(movieTitleValue);
@@ -33,24 +33,44 @@ var sumbitSearchHandler = function (event) {
 
 }
 
-// Requests results from the OMDB API for the user.
 
-var getUserMovies = function(title, year, plot, json, xml) {
-    var myapiUrl = ("http://www.omdbapi.com/?apikey=5385144e&t" + title + "&y=" + year + plot + "&r=" + json + xml);
+// Requests results from the OMDB API for the user.
+var getUserMovies = function(movieTitleValue) {
+    var myapiUrl = "http://www.omdbapi.com/?apikey=5385144e&s + title";
     // OMDB API fetch request
     fetch(myapiUrl).then(function (response){
 if (response.ok) {
     console.log(response);
     response.json().then(function (data){
         console.log(data);
-        //display(data, title, year, plot, json, xml);
+        displayMovies(data.items, movieTitleValue);
     });
 } else {
     getUserMoviesErrorEl.textContent = 'Sorry, we were unable to retrieve your search results.';
 }
-    })
+    });
 
-}
+};
+
+var getUserMovies = function(movieYearValue) {
+var myapiUrl = "http://www.omdbapi.com/?apikey=5385144e&y + year"
+fetch(myapiUrl).then(function (response){
+    if (response.ok) {
+console.log(response);
+response.json().then(function(data){
+    console.log(data);
+    displayMovies(data.items, movieYearValue);
+}); 
+    } else {
+        getUserMoviesErrorEl.textContent = 'Sorry, we were unable to retrieve your search results.';
+    }
+});
+};
+
+
+//var displayMovies = function(movieTitleValue) {
+
+//}
 
 // Submit button event listener
 submitButtonEl.addEventListener('click', sumbitSearchHandler);
