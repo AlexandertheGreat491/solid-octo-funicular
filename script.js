@@ -1,4 +1,5 @@
 /*OMDB js*/
+
 // Global variables
 var userForm = document.querySelector('#user-form');
 var movieTitleEl = document.querySelector('#enter-title');
