@@ -69,7 +69,7 @@ var sumbitSearchHandler = function (event) {
 
 // Requests results from the OMDB API for the user.
 var getUserMovies = function (movieTitleValue) {
-    var myapiUrl = ("http://www.omdbapi.com/?apikey=be881b6b&s");
+    var myapiUrl = ("http://www.omdbapi.com/?apikey=be881b6b&t&y&plot=short&r=json");
 
     fetch(myapiUrl).then(function(response) {
         if (response.ok) {
@@ -88,7 +88,7 @@ var getUserMovies = function (movieTitleValue) {
 
 
 
-var getUserMovies = function (movieYearValue) {
+/*var getUserMovies = function (movieYearValue) {
     var myapiUrl = "http://www.omdbapi.com/?apikey=be881b6b&y";
     fetch(myapiUrl).then(function(response) {
         if (response.ok) {
