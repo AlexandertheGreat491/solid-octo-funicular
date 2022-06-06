@@ -15,14 +15,18 @@
 
      <!--OMDB-->
 
-     <!--programmabe search engine-->
+     <!--google custom programmabe search engine api-->
      <div>
          <h3>Streaming service search</h3>
-         <p>search a movie in the google bar to find a streaming service to watch on</p>
-        <script async src="https://cse.google.com/cse.js?cx=26e4f40d5ac7281e0"></script>
-        <div class="gcse-search"></div>
+         <p>search a movie to find a streaming service to watch on</p>
+         <form id="google-form">
+            <input id="google-search" type="text" autofocus="true"></input>
+            <button id="google-search-button" type="submit">Search</button>
+         </form>
+         <div id="websites"></div>
      </div>
-        
+
+
         <script src="script.js"></script>
     </body>
 </html>
