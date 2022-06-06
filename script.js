@@ -7,6 +7,7 @@ var moviePlotEl = document.querySelector('#plot-choice');
 var responseTypeEl = document.querySelector('#response');
 var moviesContainerEl = document.querySelector('#movies-container');
 var movieSearchTerm = document.querySelector('#movie-search-term');
+var movieSearchTermEl = document.createElement("ul");
 var submitButtonEl = document.querySelector('#submit');
 var errorMessageEl = document.createElement("p");
 var getUserMoviesErrorEl = document.createElement("p");
@@ -69,75 +70,34 @@ var sumbitSearchHandler = function (event) {
 
 // Requests results from the OMDB API for the user.
 var getUserMovies = function (movieTitleValue) {
-    var myapiUrl = ("http://www.omdbapi.com/?apikey=be881b6b&t&y&plot=short&r=json");
+    var myapiUrl = ("http://www.omdbapi.com/?apikey=be881b6b&t");
 
     fetch(myapiUrl).then(function(response) {
         if (response.ok) {
             console.log(response);
-            response.json().then(function () {
-                //console.log(data);
-                displayMovies(movieTitleValue);
-            });
+            response.json(); 
         } else {
             console.log(getUserMoviesErrorEl);
             getUserMoviesErrorEl.textContent = 'Sorry, we were unable to retrieve your search results.';
         }
-    });
+    })
+    .then(function(movieSearchTerm){
+        var movieSearchTerm = movieTitleValue;
+        //console.log(data);
+        movieSearchTerm(movieTitleValue)
+    })
 
 };
 
-
-
-/*var getUserMovies = function (movieYearValue) {
-    var myapiUrl = "http://www.omdbapi.com/?apikey=be881b6b&y";
-    fetch(myapiUrl).then(function(response) {
-        if (response.ok) {
-            console.log(response);
-            response.json().then(function (data) {
-                console.log(data);
-                displayMovies(data.items, movieYearValue);
-            });
-        } else {
-            getUserMoviesErrorEl.textContent = 'Sorry, we were unable to retrieve your search results.';
-        }
-    });
-};
-
-var getUserMovies = function(moviePlotValue) {
-var myapiUrl = "http://www.omdbapi.com/?apikey=be881b6b&plot";
-fetch(myapiUrl).then(function(response){
-if (response.ok) {
-console.log(response);
-response.json().then(function(data){
-console.log(data);
-displayMovies(data.items, moviePlotValue);
- });
-} else {
-getUserMoviesErrorEl.textContent = 'Sorry, we were unable to retrieve your search results.'
- }
-});
-};
-
-var getUserMovies = function(responseTypeValue) {
-var myapiUrl = "http://www.omdapi.com/?apikey=5385144e&r";
-fetch(myapiUrl).then(function(response){
-if (response.ok) {
- console.log(response);
-response.json().then(function(data){
-console.log(data);
-displayMovies(data.items, responseTypeValue);
-});
-} else {
-getUserMoviesErrorEl = 'Sorry, we were unable to retrieve your search results.'
-}
-});
-};
 
 /*var displayMovies = function(movieTitleValue, movieSearchTerm) {
-    if (movieTitleValue === '') {
+    if (movieTitleValue === movieSearchTerm) {
     displayMoviesEl = movieSearchTerm;
+    } else {
+
     }
     }*/
+
 
 // Submit button event listener
 submitButtonEl.addEventListener('click', sumbitSearchHandler);
