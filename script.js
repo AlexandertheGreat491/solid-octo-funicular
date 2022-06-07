@@ -1,5 +1,7 @@
 /*OMDB js*/
 
+/*OMDB js*/
+
 // Global variables
 var userForm = document.querySelector('#user-form');
 var movieTitleEl = document.querySelector('#enter-title');
@@ -18,12 +20,15 @@ var displayMoviesEl = document.createElement("p");
 var sumbitSearchHandler = function (event) {
     event.preventDefault();
 
-    var movieTitleValue = movieTitleEl.value.trim();
-    var movieYearValue = movieYearEl.value.trim();
-    var moviePlotValue = moviePlotEl.value.trim();
-    var responseTypeValue = responseTypeEl.value.trim();
+    var randomMovieArray = ['Joker', 'Lord of the Rings', 'Ready Player One', 'Star Wars']
 
-    if (movieTitleValue) {
+    var randomNumber = Math.floor(Math.random() * randomMovieArray.length + 1);
+    console.log(randomNumber);
+
+    var randomMovie = randomMovieArray[randomNumber];
+    console.log(randomMovie);
+
+    /*if (movieTitleValue) {
         getUserMovies(movieTitleValue);
         moviesContainerEl.textContent = '';
         movieTitleValue.value = '';
@@ -64,29 +69,30 @@ var sumbitSearchHandler = function (event) {
     } else {
         console.log("errorhere");
         errorMessageEl.textContent = 'Please enter a valid response type: JSON or XML.'
-    }
-    
+    }*/
+
 }
 
 
 // Requests results from the OMDB API for the user.
 var getUserMovies = function (movieTitleValue) {
+
     var myapiUrl = ("http://www.omdbapi.com/?apikey=be881b6b&t");
 
-    fetch(myapiUrl).then(function(response) {
+    fetch(myapiUrl).then(function (response) {
         if (response.ok) {
             console.log(response);
-            response.json(); 
+            response.json();
         } else {
             console.log(getUserMoviesErrorEl);
             getUserMoviesErrorEl.textContent = 'Sorry, we were unable to retrieve your search results.';
         }
     })
-    .then(function(movieSearchTerm){
-        var movieSearchTerm = movieTitleValue;
-        //console.log(data);
-        movieSearchTerm(movieTitleValue)
-    })
+        .then(function (movieSearchTerm) {
+            var movieSearchTerm = movieTitleValue;
+            //console.log(data);
+            movieSearchTerm(movieTitleValue)
+        })
 
 };
 
@@ -102,5 +108,4 @@ var getUserMovies = function (movieTitleValue) {
 
 // Submit button event listener
 submitButtonEl.addEventListener('click', sumbitSearchHandler);
-
 
