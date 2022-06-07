@@ -20,14 +20,16 @@ var displayMoviesEl = document.createElement("p");
 var sumbitSearchHandler = function (event) {
     event.preventDefault();
 
-    var randomMovieArray = ['Joker', 'Lord of the Rings', 'Ready Player One', 'Star Wars']
+    var randomMovieArray = ['Joker', 'Lord of the Rings', 'Ready Player One', 'Star Wars', 'Hobbit']
 
     var randomNumber = Math.floor(Math.random() * randomMovieArray.length + 1);
     console.log(randomNumber);
 
     var randomMovie = randomMovieArray[randomNumber];
     console.log(randomMovie);
+    function apiCall() {
 
+    }
     /*if (movieTitleValue) {
         getUserMovies(movieTitleValue);
         moviesContainerEl.textContent = '';
