@@ -8,24 +8,24 @@
     "Director": "Tim Burton",
     "Writer": "Bob Kane, Sam Hamm, Warren Skaaren",
     "Actors": "Michael Keaton, Jack Nicholson, Kim Basinger",
-    "Plot": "Gotham City. Crime boss Carl Grissom (Jack Palance) effectively runs the town but there's a new crime fighter in town - Batman (Michael Keaton).\n Grissom's right-hand man is Jack Napier (Jack Nicholson), a brutal man who is not entirely sane...\n After falling out between the two Grissom has Napier set up with the Police and Napier falls to his apparent death in a vat of chemicals.\n However, he soon reappears as The Joker and starts a reign of terror in Gotham City.\n Meanwhile, reporter Vicki Vale (Kim Basinger) is in the city to do an article on Batman.\n She soon starts a relationship with Batman's everyday persona, billionaire Bruce Wayne.",
+    "Plot": "Gotham City. Crime boss Carl Grissom (Jack Palance) effectively runs the town but there's a new crime fighter in town - Batman (Michael Keaton). Grissom's right-hand man is Jack Napier (Jack Nicholson), a brutal man who is not entirely sane... After falling out between the two Grissom has Napier set up with the Police and Napier falls to his apparent death in a vat of chemicals. However, he soon reappears as The Joker and starts a reign of terror in Gotham City. Meanwhile, reporter Vicki Vale (Kim Basinger) is in the city to do an article on Batman. She soon starts a relationship with Batman's everyday persona, billionaire Bruce Wayne.",
     "Language": "English, French, Spanish",
     "Country": "United States, United Kingdom",
     "Awards": "Won 1 Oscar. 9 wins & 26 nominations total",
     "Poster": "https://m.media-amazon.com/images/M/MV5BZTM2NmZlOTEtYTI5NS00N2JjLWJkNzItMmZkNDBlYmQzNDA2XkEyXkFqcGdeQXVyMTAxODYyODI@._V1_SX300.jpg",
     "Ratings": [
-      {
-        "Source": "Internet Movie Database",
-        "Value": "7.5/10"
-      },
-      {
-        "Source": "Rotten Tomatoes",
-        "Value": "72%"
-      },
-      {
-        "Source": "Metacritic",
-        "Value": "69/100"
-      }
+        {
+            "Source": "Internet Movie Database",
+            "Value": "7.5/10"
+        },
+        {
+            "Source": "Rotten Tomatoes",
+            "Value": "72%"
+        },
+        {
+            "Source": "Metacritic",
+            "Value": "69/100"
+        }
     ],
     "Metascore": "69",
     "imdbRating": "7.5",
@@ -37,4 +37,4 @@
     "Production": "N/A",
     "Website": "N/A",
     "Response": "True"
-  }
+}

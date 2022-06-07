@@ -32,7 +32,7 @@ for (var i = 0; i < data.length; i++) {
         "Director": "Tim Burton",
         "Writer": "Bob Kane, Sam Hamm, Warren Skaaren",
         "Actors": "Michael Keaton, Jack Nicholson, Kim Basinger",
-        "Plot": "Gotham City. Crime boss Carl Grissom (Jack Palance) effectively runs the town but there's a new crime fighter in town - Batman (Michael Keaton).\nGrissom's right-hand man is Jack Napier (Jack Nicholson), a brutal man who is not entirely sane...\nAfter falling out between the two Grissom has Napier set up with the Police and Napier falls to his apparent death in a vat of chemicals. \n However, he soon reappears as The Joker and starts a reign of terror in Gotham City.\nMeanwhile, reporter Vicki Vale (Kim Basinger) is in the city to do an article on Batman.\nShe soon starts a relationship with Batman's everyday persona, billionaire Bruce Wayne.",
+        "Plot": "Gotham City. Crime boss Carl Grissom (Jack Palance) effectively runs the town but there's a new crime fighter in town - Batman (Michael Keaton). Grissom's right-hand man is Jack Napier (Jack Nicholson), a brutal man who is not entirely sane... After falling out between the two Grissom has Napier set up with the Police and Napier falls to his apparent death in a vat of chemicals. However, he soon reappears as The Joker and starts a reign of terror in Gotham City. Meanwhile, reporter Vicki Vale (Kim Basinger) is in the city to do an article on Batman. She soon starts a relationship with Batman's everyday persona, billionaire Bruce Wayne.",
         "Language": "English, French, Spanish",
         "Country": "United States, United Kingdom",
         "Awards": "Won 1 Oscar. 9 wins & 26 nominations total",
