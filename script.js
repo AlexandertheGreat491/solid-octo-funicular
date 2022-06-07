@@ -8,7 +8,8 @@ var starwarsrequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Star+Wars&pl
 var playeronerequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Ready+Player+One&plot=full"
 var submitButtonEl = document.querySelector('#submit');
 var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Ready Player One'];
-var randomNumber = Math.floor(Math.random() * randomMovieArray.length) - 1;
+var randomNumber = Math.floor(Math.random() * randomMovieArray.length);
+console.log(randomNumber)
 var movieDetailsEl = document.querySelector('#json');
 
 
@@ -24,7 +25,7 @@ var sumbitSearchHandler = function (event) {
         url = playeronerequestUrl
     } else if (randomMovie === "Batman") {
         url = batmanrequestUrl
-    } else if (randomeMovie === "Joker") {
+    } else if (randomMovie === "Joker") {
         url = jokerrequestUrl
     }
 
@@ -49,7 +50,10 @@ var sumbitSearchHandler = function (event) {
             movieDetailsEl.append(yearEl);
             // released
             var releaseDate = data.Released;
-            
+            var releaseEl = document.createElement("p");
+            releaseEl.style.fontSize = "1.25em";
+            releaseEl.innerHTML = releaseDate;
+            movieDetailsEl.append(releaseEl);
 
 
         });
@@ -57,9 +61,7 @@ var sumbitSearchHandler = function (event) {
 
 
 
-    /*document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 2);
-console.log(data.data.title);*/
-}
+    }
 
 
 // Submit button event listener
