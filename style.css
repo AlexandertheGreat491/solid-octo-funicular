@@ -1,15 +1,10 @@
 /*OMDB Styling starts*/
 
-/*OMDB Styling starts*/
-
 /*Article styling*/
 #lights-camera-action {
     background-color: #4d94ff;
-    margin: 1.25em;
-    padding: 0.3125em;
     border: 0.625em groove #737373;
     border-radius: 1.25em; 
-    width: 80%;
 }
 
 label {
@@ -43,13 +38,12 @@ margin-left: 0.625em;
 }
 
 /* Styling for the div where user search results will display */
-#results {
+#json {
     font-weight: lighter;
-    font-size: 0.9375em;
+    font-size: 0.75em;
 }
 
 
 /*OMDB styling ends*/
 
 
-/*OMDB styling ends*/
