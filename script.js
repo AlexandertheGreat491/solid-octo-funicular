@@ -7,74 +7,60 @@ var jokerrequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Joker&plot=full
 var starwarsrequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Star+Wars&plot=full"
 var playeronerequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Ready+Player+One&plot=full"
 var submitButtonEl = document.querySelector('#submit');
-var randomMovieArry = ['Batman', 'Joker', 'Star Wars', 'Ready Player One'];
-var randomNumber = Math.floor(Math.random() * randomMovieArry) + 1;
-
+var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Ready Player One'];
+var randomNumber = Math.floor(Math.random() * randomMovieArray.length) - 1;
+var movieDetailsEl = document.querySelector('#json');
 
 
 // Handles the json results after the Submit button is clicked by the user and then results are displayed in the html.
 
-var sumbitSearchHandler = function (event){
-fetch(batmanrequestUrl)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-    displayBatman(data)
-  });
-  
+var sumbitSearchHandler = function (event) {
+    var url = '';
+    var randomMovie = randomMovieArray[randomNumber]
+    // Conditions
+    if (randomMovie === "Star Wars") {
+        url = starwarsrequestUrl
+    } else if (randomMovie === "Ready Player One") {
+        url = playeronerequestUrl
+    } else if (randomMovie === "Batman") {
+        url = batmanrequestUrl
+    } else if (randomeMovie === "Joker") {
+        url = jokerrequestUrl
+    }
 
-function displayBatman(data) {
-for (var i = 0; i < data.length; i++) {
-    var div = document.createElement("div");
-    var data = {
-        "data": {
-        "Title": "Batman",
-        "Year": "1989",
-        "Rated": "PG-13",
-        "Released": "23 Jun 1989",
-        "Runtime": "126 min",
-        "Genre": "Action, Adventure",
-        "Director": "Tim Burton",
-        "Writer": "Bob Kane, Sam Hamm, Warren Skaaren",
-        "Actors": "Michael Keaton, Jack Nicholson, Kim Basinger",
-        "Plot": "Gotham City. Crime boss Carl Grissom (Jack Palance) effectively runs the town but there's a new crime fighter in town - Batman (Michael Keaton). Grissom's right-hand man is Jack Napier (Jack Nicholson), a brutal man who is not entirely sane... After falling out between the two Grissom has Napier set up with the Police and Napier falls to his apparent death in a vat of chemicals. However, he soon reappears as The Joker and starts a reign of terror in Gotham City. Meanwhile, reporter Vicki Vale (Kim Basinger) is in the city to do an article on Batman. She soon starts a relationship with Batman's everyday persona, billionaire Bruce Wayne.",
-        "Language": "English, French, Spanish",
-        "Country": "United States, United Kingdom",
-        "Awards": "Won 1 Oscar. 9 wins & 26 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BZTM2NmZlOTEtYTI5NS00N2JjLWJkNzItMmZkNDBlYmQzNDA2XkEyXkFqcGdeQXVyMTAxODYyODI@._V1_SX300.jpg",
-        "Ratings": [
-            {
-                "Source": "Internet Movie Database",
-                "Value": "7.5/10"
-            },
-            {
-                "Source": "Rotten Tomatoes",
-                "Value": "72%"
-            },
-            {
-                "Source": "Metacritic",
-                "Value": "69/100"
-            }
-        ],
-        "Metascore": "69",
-        "imdbRating": "7.5",
-        "imdbVotes": "371,227",
-        "imdbID": "tt0096895",
-        "Type": "movie",
-        "DVD": "22 Aug 1997",
-        "BoxOffice": "$251,409,241",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True" }
-    };  
+
+    fetch(url)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data.Title);
+            // title
+            var movieTitle = data.Title;
+            var titleEl = document.createElement("h2");
+            titleEl.style.fontSize = "1.875em";
+            titleEl.innerHTML = movieTitle;
+            movieDetailsEl.append(titleEl);
+            // year
+            var movieYear = data.Year;
+            var yearEl = document.createElement("p");
+            yearEl.style.fontSize = "1.25em";
+            yearEl.innerHTML = movieYear;
+            movieDetailsEl.append(yearEl);
+            // released
+            var releaseDate = data.Released;
+            
+
+
+        });
+
+
+
+
+    /*document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 2);
+console.log(data.data.title);*/
 }
 
-document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 2);
-
-  }
-}
 
 // Submit button event listener
 submitButtonEl.addEventListener('click', sumbitSearchHandler);
