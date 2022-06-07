@@ -8,7 +8,8 @@
     margin: 1.25em;
     padding: 0.3125em;
     border: 0.625em groove #737373;
-    border-radius: 0.3125em; 
+    border-radius: 1.25em; 
+    width: 80%;
 }
 
 label {
@@ -20,14 +21,14 @@ label {
 /*OMDB h1 element styling*/
 #movie {
     font-weight: bold;
-    font-size: 2.8125em;
+    font-size: 1.5625em;
     text-decoration: underline;
 }
 
 /*OMDB h2 element styling*/
 #pun {
 font-weight:lighter;
-font-size: l.25em;
+font-size: 0.9375em;
 }
 
 /* Styling for icons in Search and Reset buttons*/
