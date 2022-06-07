@@ -110,7 +110,20 @@ var sumbitSearchHandler = function (event) {
             awardsEl.innerHTML = movieAwards;
             movieDetailsEl.append(awardsEl);
             
-            
+            //localStorage
+            //get help during office hours
+            localStorage.setItem(movieTitle);
+            localStorage.setItem(movieYear);
+            localStorage.setItem(releaseDate);
+            localStorage.setItem(runTime);
+            localStorage.setItem(whatGenre);
+            localStorage.setItem(movieDirector);
+            localStorage.setItem(movieWriter);
+            localStoragae.setItem(movieActors);
+            localStorage.setItem(moviePlot);
+            localStorage.setItem(movieLanguage);
+            localStorage.setItem(movieCountry);
+            localStorage.setItem(movieAwards);
             
 
         });
@@ -125,4 +138,5 @@ var sumbitSearchHandler = function (event) {
 submitButtonEl.addEventListener('click', sumbitSearchHandler);
 
 // Reset button event listener
-resetButtonEl.addEventListener('click');
+// Get help during office hours
+resetButtonEl.addEventListener('click', url);
