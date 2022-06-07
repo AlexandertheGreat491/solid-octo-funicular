@@ -119,7 +119,7 @@ var sumbitSearchHandler = function (event) {
             localStorage.setItem(whatGenre, data.Genre);
             localStorage.setItem(movieDirector, data.Director);
             localStorage.setItem(movieWriter, data.Writer);
-            localStoragae.setItem(movieActors, data.Actors);
+            localStorage.setItem(movieActors, data.Actors);
             localStorage.setItem(moviePlot, data.Plot);
             localStorage.setItem(movieLanguage, data.Language);
             localStorage.setItem(movieCountry, data.Country);
