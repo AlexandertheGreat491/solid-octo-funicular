@@ -25,14 +25,9 @@ label {
 }
 
 /*OMDB h2 element styling*/
-#subheader {
+#pun {
 font-weight:lighter;
 font-size: l.25em;
-}
-
-#enter-title, #year, #plot-choice, #response {
-    font-weight: bold;
-    font-size: 0.9375em;
 }
 
 /* Styling for icons in Search and Reset buttons*/
