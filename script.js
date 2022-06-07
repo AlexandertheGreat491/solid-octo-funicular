@@ -54,14 +54,44 @@ var sumbitSearchHandler = function (event) {
             releaseEl.style.fontSize = "1.25em";
             releaseEl.innerHTML = releaseDate;
             movieDetailsEl.append(releaseEl);
-
+            // runtime
+            var runTime = data.Runtime;
+            var runTimeEl = document.createElement("p");
+            runTimeEl.style.fontSize = "1.25em";
+            runTimeEl.innerHTML = runTime;
+            movieDetailsEl.append(runTimeEl);
+            // genre
+            var whatGenre = data.Genre;
+            var genreEl = document.createElement("p");
+            genreEl.style.fontSize = "1.25em";
+            genreEl.innerHTML = whatGenre;
+            movieDetailsEl.append(genreEl);
+            // director
+            var movieDirector = data.Director;
+            var directorEl = document.createElement("p");
+            directorEl.style.fontSize = "1.25em";
+            directorEl.innerHTML = movieDirector;
+            movieDetailsEl.append(directorEl);
+            // writer
+            var movieWriter = data.Writer;
+            var writerEl = document.createElement("p");
+            writerEl.style.fontSize = "1.25em";
+            writerEl.innerHTML = movieWriter;
+            movieDetailsEl.append(writerEl);
+            // actors
+            var movieActors = data.Actors;
+            var actorsEl = document.createElement("p");
+            actorsEl.style.fontSize = "1.25em";
+            actorsEl.innerHTML = movieActors;
+            movieDetailsEl.append(actorsEl);
+            
 
         });
 
 
 
 
-    }
+}
 
 
 // Submit button event listener
