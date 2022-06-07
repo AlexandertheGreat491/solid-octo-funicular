@@ -112,18 +112,18 @@ var sumbitSearchHandler = function (event) {
             
             //localStorage
             //get help during office hours
-            localStorage.setItem(movieTitle);
-            localStorage.setItem(movieYear);
-            localStorage.setItem(releaseDate);
-            localStorage.setItem(runTime);
-            localStorage.setItem(whatGenre);
-            localStorage.setItem(movieDirector);
-            localStorage.setItem(movieWriter);
-            localStoragae.setItem(movieActors);
-            localStorage.setItem(moviePlot);
-            localStorage.setItem(movieLanguage);
-            localStorage.setItem(movieCountry);
-            localStorage.setItem(movieAwards);
+            localStorage.setItem(movieTitle, data.Title);
+            localStorage.setItem(movieYear, data.Year);
+            localStorage.setItem(releaseDate, data.Released);
+            localStorage.setItem(runTime, data.Runtime);
+            localStorage.setItem(whatGenre, data.Genre);
+            localStorage.setItem(movieDirector, data.Director);
+            localStorage.setItem(movieWriter, data.Writer);
+            localStoragae.setItem(movieActors, data.Actors);
+            localStorage.setItem(moviePlot, data.Plot);
+            localStorage.setItem(movieLanguage, data.Language);
+            localStorage.setItem(movieCountry, data.Country);
+            localStorage.setItem(movieAwards, data.Awards);
             
 
         });
