@@ -7,6 +7,7 @@ var jokerrequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Joker&plot=full
 var starwarsrequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Star+Wars&plot=full"
 var playeronerequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Ready+Player+One&plot=full"
 var submitButtonEl = document.querySelector('#submit');
+var resetButtonEl = document.querySelector('#reset');
 var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Ready Player One'];
 var randomNumber = Math.floor(Math.random() * randomMovieArray.length);
 console.log(randomNumber)
@@ -84,6 +85,32 @@ var sumbitSearchHandler = function (event) {
             actorsEl.style.fontSize = "1.25em";
             actorsEl.innerHTML = movieActors;
             movieDetailsEl.append(actorsEl);
+            // plot
+            var moviePlot = data.Plot;
+            var plotEl = document.createElement("textarea");
+            plotEl.style.fontSize = "1.25em";
+            plotEl.innerHTML = moviePlot;
+            movieDetailsEl.append(plotEl);
+            // language
+            var movieLanguage = data.Language;
+            var languageEl = document.createElement("p");
+            languageEl.style.fontSize = "1.25em";
+            languageEl.innerHTML = movieLanguage;
+            movieDetailsEl.append(languageEl);
+            // country
+            var movieCountry = data.Country;
+            var countryEl = document.createElement("p");
+            countryEl.style.fontSize = "1.25em";
+            countryEl.innerHTML = movieCountry;
+            movieDetailsEl.append(countryEl);
+            // awards
+            var movieAwards = data.Awards;
+            var awardsEl = document.createElement("p");
+            awardsEl.style.fontSize = "1.25em";
+            awardsEl.innerHTML = movieAwards;
+            movieDetailsEl.append(awardsEl);
+            
+            
             
 
         });
@@ -96,3 +123,6 @@ var sumbitSearchHandler = function (event) {
 
 // Submit button event listener
 submitButtonEl.addEventListener('click', sumbitSearchHandler);
+
+// Reset button event listener
+resetButtonEl.addEventListener('click');
