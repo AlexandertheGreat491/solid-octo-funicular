@@ -2,13 +2,20 @@
 
 // Global variables
 
-var requestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Batman&plot=full";
+var batmanrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Batman&plot=full";
+var jokerrequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Joker&plot=full"
+var starwarsrequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Star+Wars&plot=full"
+var playeronerequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Ready+Player+One&plot=full"
 var submitButtonEl = document.querySelector('#submit');
+var randomMovieArry = ['Batman', 'Joker', 'Star Wars', 'Ready Player One'];
+var randomNumber = Math.floor(Math.random() * randomMovieArry) + 1;
+
+
 
 // Handles the json results after the Submit button is clicked by the user and then results are displayed in the html.
 
 var sumbitSearchHandler = function (event){
-fetch(requestUrl)
+fetch(batmanrequestUrl)
   .then(function (response) {
     return response.json();
   })
