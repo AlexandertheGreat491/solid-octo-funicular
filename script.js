@@ -1,10 +1,12 @@
 /*OMDB js*/
 
 // Global variables
+
 var requestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Batman&plot=full";
 var submitButtonEl = document.querySelector('#submit');
 
-//handles the json results
+// Handles the json results after the Submit button is clicked by the user and then results are displayed in the html.
+
 var sumbitSearchHandler = function (event){
 fetch(requestUrl)
   .then(function (response) {
