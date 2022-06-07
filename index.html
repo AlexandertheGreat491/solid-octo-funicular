@@ -27,23 +27,20 @@
         <h2 id="pun">A Dark Knight Rises</h2>
         <div class="row">
             <div class="col s12 m6">
-                <button class="btn waves-effect waves-light btn-small" type="submit" id="submit">Submit<i
+                
+            <div class="movie-container">
+                <div class="col s12 m6" id="results-container">
+                    <h2 id="results">Everything from OMDB </h2>
+                    <button class="btn waves-effect waves-light btn-small" type="submit" id="submit">Submit<i
                         class="fa-solid fa-play" id="play-button"></i></button>
-
                 <button class="btn waves-effect waves-light btn-small" type="reset" id="reset">Reset<i
                         class="fa-solid fa-backward" id="rewind"></i></button>
-
-            </div>
-            <!--User search results will display below.-->
-            <div class="container">
-                <div class="result-container col s12 m6">
-                    <div class="result-grid" id="result-grid">
-                        <h2 id="results">Everything from OMDB </h2>
-                        <!--movie information here-->
-
-                    </div>
+                    <!--movie information here-->
+                    <pre id="json" class="left-align"></pre>
                 </div>
             </div>
+        </div>
+
 
     </article>
     <!--Google Maps-->
