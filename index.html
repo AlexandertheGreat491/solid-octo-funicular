@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Movie Nerds</title>
+    <title>Robin's Cousins</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Materialize stylesheet-->
@@ -22,61 +22,27 @@
     <!--header-->
 
     <!--OMDB-->
-    <article id="lights-camera-action">
-        <h1 id="movie" class="z-depth-4 grey lighten-2">The Open Movie Database (OMDB)</h1>
-        <br>
+    <article class="col s12 m6" id="lights-camera-action">
+        <h1 id="movie">The Open Movie Database</h1>
+        <h2 id="pun">A Dark Knight Rises</h2>
         <div class="row">
-            <form id="user-form" class="col s12 m6">
-                <h2 class="z-depth-3 grey lighten-2" id="subheader">By Title:</h2>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <label for="enter-title" class="z-depth-1 grey lighten-2">Title:</label>
-                        <p></p>
-                        <br>
-                        <input placeholder="Enter movie title here" id="enter-title" name="enter-title" type="text"
-                            class="validate" name="query">
-                    </div>
-                    <div class="input-field col s6">
-                        <label for="year" class="z-depth-1 grey lighten-2">Year:</label>
-                        <p></p>
-                        <br>
-                        <input placeholder="Enter the year of the movie" id="year" name="year" type="text"
-                            class="validate">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <label for="plot-choice" class="z-depth-1 grey lighten-2">Plot:</label>
-                        <p></p>
-                        <br>
-                        <input placeholder="Enter Short or Full" id="plot-choice" name="plot-choice" type="text"
-                            class="validate">
-                    </div>
-                    <div class="input-field col s6">
-                        <label for="response" class="z-depth-1 grey lighten-2">Response</label>
-                        <p></p>
-                        <br>
-                        <input placeholder="Enter JSON or XML" id="response" name="response" type="text"
-                            class="validate">
-                    </div>
-                </div>
+            <div class="col s12 m6">
+                <button class="btn waves-effect waves-light btn-small" type="submit" id="submit">Submit<i class="fa-solid fa-play" id="play-button"></i></button>
 
-                <button class="btn waves-effect waves-light btn-small btn modal-trigger z-depth-2" type="submit" name="action"
-                    id="submit">Submit<i class="fa-solid fa-play" id="play-button"></i></button>
-                <button class="btn waves-effect waves-light btn-small z-depth-2" type="reset" id="clear">Reset<i
+                <button class="btn waves-effect waves-light btn-small" type="reset" id="reset">Reset<i
                         class="fa-solid fa-backward" id="rewind"></i></button>
 
-        </div>
-        </div>
-        </div>
-        </form>
-        <!--User search results will display below.-->
-        <div class="movie-result-container">
-            <h2 id="results">
-                Showing Movie Results for: <span id="movie-search-term"></span>
-            </h2>
-            <div id="movies-container"></div>
-        </div>
+            </div>
+            <!--User search results will display below.-->
+            <div class="container">
+                <div class="result-container col s12 m6">
+                    <div class="result-grid" id="result-grid">
+                        <h2 id="results">Everything from OMDB </h2>
+                        <!--movie information here-->
+
+                    </div>
+                </div>
+            </div>
 
     </article>
     <!--Google Maps-->
