@@ -1,4 +1,4 @@
-/*OMDB js*/
+/*OMDB js starts*/
 
 // Global variables
 
@@ -110,8 +110,8 @@ var sumbitSearchHandler = function (event) {
             awardsEl.innerHTML = movieAwards;
             movieDetailsEl.append(awardsEl);
             
-            //localStorage
-            //get help during office hours
+            // localStorage
+            
             localStorage.setItem(movieTitle, data.Title);
             localStorage.setItem(movieYear, data.Year);
             localStorage.setItem(releaseDate, data.Released);
@@ -140,3 +140,5 @@ submitButtonEl.addEventListener('click', sumbitSearchHandler);
 // Reset button event listener
 // Get help during office hours
 resetButtonEl.addEventListener('click', url);
+
+/*OMDB js ends*/
