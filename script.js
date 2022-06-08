@@ -49,10 +49,10 @@ googleFormEl.addEventListener("submit", googleFormHandler)
 var batmanrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Batman&plot=full";
 var jokerrequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Joker&plot=full"
 var starwarsrequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Star+Wars&plot=full"
-//var playeronerequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Ready+Player+One&plot=full"
+var backtothefuturerequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Back+to+the+Future&plot=full"
 var submitButtonEl = document.querySelector('#submit');
 var resetButtonEl = document.querySelector('#reset');
-var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Ready Player One'];
+var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Back to the Future'];
 var randomNumber = Math.floor(Math.random() * randomMovieArray.length);
 console.log(randomNumber)
 var movieDetailsEl = document.querySelector('#json');
@@ -66,8 +66,8 @@ var sumbitSearchHandler = function (event) {
     // Conditions
     if (randomMovie === "Star Wars") {
         url = starwarsrequestUrl
-    } //else if (randomMovie === "Ready Player One") {
-       // url = playeronerequestUrl
+    } else if (randomMovie === "Back to the Future") {
+        url = backtothefuturerequestUrl
      else if (randomMovie === "Batman") {
         url = batmanrequestUrl
     } else if (randomMovie === "Joker") {
