@@ -52,8 +52,8 @@ var starwarsrequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Star+Wars&pl
 var backtothefuturerequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Back+to+the+Future&plot=full"
 var submitButtonEl = document.querySelector('#submit');
 var resetButtonEl = document.querySelector('#reset');
-var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Back to the Future'];
-var randomNumber = Math.floor(Math.random() * randomMovieArray.length);
+var randomMovieArray = ['Batman', 'Joker', 'Star Wars','Back to the Future'];
+var randomNumber = Math.floor(Math.random() * randomMovieArray.length) -1;
 console.log(randomNumber)
 var movieDetailsEl = document.querySelector('#json');
 
