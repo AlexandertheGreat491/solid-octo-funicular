@@ -181,3 +181,6 @@ var sumbitSearchHandler = function (event) {
 // Submit button event listener
 submitButtonEl.addEventListener('click', sumbitSearchHandler);
 
+
+
+/*OMDB js ends*/
