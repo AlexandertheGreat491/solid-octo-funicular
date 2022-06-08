@@ -3,21 +3,27 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Movie Nerds</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Movie Nerds</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Materialize stylesheet-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Font Awesome stylesheet-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--Google Fonts-->
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-  <!--Materialize CSS-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!--Local CSS-->
-  <link rel="stylesheet" href="style.css">
+    <!--Custom stylesheet-->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
+    <!--header-->
+<header>
     <h1>
       <a href="./index.html">Movie Nerds</a>
     </h1>
@@ -35,15 +41,41 @@
       </ul>
     </nav>
   </header>
-
-  <!--OMDB-->
-
-  <!--Google Maps-->
-
-  <!--Materialize JS-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <!--Local Script-->
-  <script src="script.js"></script>
+    <!--OMDB-->
+    <article class="col s12 m6" id="lights-camera-action">
+        <h1 id="movie">The Open Movie Database</h1>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="movie-container">
+                    <div class="col s12 m6" id="results-container">
+                        <h2 id="results">Everything from OMDB </h2>
+                        <p id="pun">Click the Submit button to get information about a random movie</p>
+                        <button class="btn waves-effect waves-light btn-small" type="submit" id="submit">Submit<i
+                                class="fa-solid fa-play" id="play-button"></i></button>
+                        <button class="btn waves-effect waves-light btn-small" type="reset" id="reset">Reset<i
+                                class="fa-solid fa-backward" id="rewind"></i></button>
+                        <!--movie information here-->
+                        
+                            <pre id="json"></pre>
+                        
+                    </div>
+                </div>
+            </div>
+    </article>
+    <!--Google Maps-->
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Custom JavaScript-->
+    <script src="script.js"></script>
 </body>
 
 </html>
+
+  
+
+
+
