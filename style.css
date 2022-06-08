@@ -2,7 +2,6 @@
 
 * {
   font-family: 'Josefin Sans', sans-serif;
-  
 }
 
 /* movie poster slideshow styling */
@@ -16,52 +15,77 @@
 /*OMDB Styling starts*/
 
 /*Article styling*/
+
 #lights-camera-action {
+
     background-color: #4d94ff;
     border: 0.625em groove #737373;
-    border-radius: 1.25em; 
+    border-radius: 1.5625em; 
+    margin-top: 0.9375em;
 }
 
 label {
-    font-weight: bold;
-    color: #ffffff;
-    font-size: 0.9375em;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 0.9375em;
 }
 
 /*OMDB h1 element styling*/
+
 #movie {
+
     font-weight: bold;
-    font-size: 1.5625em;
+    font-size: 1.875em;
     text-decoration: underline;
+
 }
 
 /*OMDB p element styling*/
+
 #pun {
-font-weight:lighter;
+font-weight: 700;
 font-size: 0.9375em;
+font-style: oblique;
 }
 
-/* Styling for icons in Search and Reset buttons*/
-#play-button, #rewind {
+/* Styling for icons in Submit button*/
+
+#play-button {
 margin-left: 0.625em;
 }
 
-/* Search and Reset buttons styling*/
-#submit, #reset {
+/* Submit button styling*/
+
+#submit {
     font-size: 1.125em;
     border-radius: 0.3125em;
+  font-weight: lighter;
+  font-size: 0.9375em;
+}
+
+#random {
+ position: relative;
+ right: -12.5em;
 }
 
 /* Styling for the div where user search results will display */
+
 #json {
-    font-weight: lighter;
+    font-weight: 400;
     font-size: 0.75em;
-    align-items: left;
 }
 
 
+#results {
+    position: relative;
+    right: -43.75em;
+    top: -12.5em;
+    margin: 0.625em;
+}
+
+#subheader {
+    font-weight: 500;
+    font-size: 1.25em; 
+}
+
 /*OMDB styling ends*/
-
-
-
-

@@ -1,3 +1,4 @@
+
 //movie poster slideshow
 var moviePostersEl = document.getElementById("movie-posters");
 var movieIndex = 0;
@@ -27,28 +28,29 @@ var moviePosterSlideshow = function() {
 setInterval(moviePosterSlideshow, 5000);
 
 
-
 // google programmable search engine api
-var searchInput 
+var searchInput
 var websitesEl = document.getElementById("websites");
 var googleFormEl = document.getElementById("google-form");
 var googleSearch = document.getElementById("google-search");
 
-    // get from input data
-var googleFormHandler = function(event) {
+// get from input data
+var googleFormHandler = function (event) {
+
     event.preventDefault();
     searchInput = googleSearch.value.trim();
     if (searchInput) {
         getGoogleData();
         googleSearch.value = "";
     }
+
 }
 
-    // api fetch request 
-var getGoogleData = function() {
+// api fetch request 
+var getGoogleData = function () {
     var apiUrl = "https://www.googleapis.com/customsearch/v1?key=AIzaSyAiib3CHEMRsVk3qS6ybJl6ffY8yOGf9ww&cx=26e4f40d5ac7281e0&q=" + searchInput;
-    fetch(apiUrl).then(function(response) {
-        response.json().then(function(data) {
+    fetch(apiUrl).then(function (response) {
+        response.json().then(function (data) {
             console.log(data);
             for (let i = 0; i < data.items.length; i++) {
                 // list each link 
@@ -63,6 +65,7 @@ var getGoogleData = function() {
                 websitesEl.appendChild(breakLine)
             }
         });
+
     });
 }
 
@@ -70,39 +73,78 @@ var getGoogleData = function() {
 googleFormEl.addEventListener("submit", googleFormHandler)
 
 // end programmable google search   
-  
+
 /*OMDB js starts*/
 
 // Global variables
 
+// Movie urls start
 var batmanrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Batman&plot=full";
-var jokerrequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Joker&plot=full"
-var starwarsrequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Star+Wars&plot=full"
-var playeronerequestUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Ready+Player+One&plot=full"
+var jokerrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Joker&plot=full"
+var starwarsrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Star+Wars&plot=full"
+var thepreciousUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Lord+of+the+Rings&plot=full"
+var playeroneUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Ready+Player+One"
+var furyUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Fury"
+var frozenUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Frozen"
+var lebowskiUrl = "https://www.omdbapi.com/?apikey=5385144e&t=The+Big+Lebowski"
+var braveUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Braveheart"
+var eliUrl = "https://www.omdbapi.com/?apikey=5385144e&t=The+Book+of+Eli"
+var californiaUrl = "https://www.omdbapi.com/?apikey=5385144e&t=California+Typewriter"
+var wolvesUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Dances+with+Wolves"
+var conUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Con+Air"
+var diamondUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Blood+Diamond"
+// Movie urls end
 var submitButtonEl = document.querySelector('#submit');
-var resetButtonEl = document.querySelector('#reset');
-var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Ready Player One'];
+
+// Array of movies that can be displayed when the user clicks the submit button.
+var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Lord of the Rings', 'Ready Player One', 'Fury', 'Frozen', 'The Big Lebowski', 
+'Braveheart', 'The Book of Eli', 'California Typewriter', 'Dances with Wolves', 'Con Air', 'Blood Diamond'];
+// Sets the number of movies to the length of the randomMovieArray.
 var randomNumber = Math.floor(Math.random() * randomMovieArray.length);
 console.log(randomNumber)
+// Gets the selector for the section of the page where the results will be displayed.
 var movieDetailsEl = document.querySelector('#json');
-
 
 // Handles the json results after the Submit button is clicked by the user and then results are displayed in the html.
 
 var sumbitSearchHandler = function (event) {
+
+    // Will use the url of a random movie.
     var url = '';
     var randomMovie = randomMovieArray[randomNumber]
-    // Conditions
+    // Conditional statements to display a random movie.
     if (randomMovie === "Star Wars") {
         url = starwarsrequestUrl
-    } else if (randomMovie === "Ready Player One") {
-        url = playeronerequestUrl
-    } else if (randomMovie === "Batman") {
+    } else if (randomMovie === "Lord of the Rings") {
+        url = thepreciousUrl
+    }
+    else if (randomMovie === "Batman") {
         url = batmanrequestUrl
     } else if (randomMovie === "Joker") {
         url = jokerrequestUrl
+    } else if (randomMovie === "Ready Player One") {
+        url = playeroneUrl
+    } else if (randomMovie === "Fury") {
+        url = furyUrl
+    } else if (randomMovie === "Frozen") {
+        url = frozenUrl
+    } else if (randomMovie === "The Big Lebowski") {
+        url = lebowskiUrl
+    } else if (randomMovie === "Braveheart") {
+        url = braveUrl
+    } else if (randomMovie === "The Book of Eli") {
+        url = eliUrl
+    } else if (randomMovie === "California Typewriter") {
+        url = californiaUrl 
+    } else if (randomMovie === "Dances with Wolves") {
+        url = wolvesUrl
+    } else if (randomMovie === "Con Air") {
+        url = conUrl
+    } else if (randomMovie === "Blood Diamond") {
+        url = diamondUrl
     }
 
+// Extracts the json data into a format that is user-friendly.
 
     fetch(url)
         .then(function (response) {
@@ -182,9 +224,9 @@ var sumbitSearchHandler = function (event) {
             awardsEl.style.fontSize = "1.25em";
             awardsEl.innerHTML = movieAwards;
             movieDetailsEl.append(awardsEl);
-            
+
             // localStorage
-            
+
             localStorage.setItem(movieTitle, data.Title);
             localStorage.setItem(movieYear, data.Year);
             localStorage.setItem(releaseDate, data.Released);
@@ -197,21 +239,15 @@ var sumbitSearchHandler = function (event) {
             localStorage.setItem(movieLanguage, data.Language);
             localStorage.setItem(movieCountry, data.Country);
             localStorage.setItem(movieAwards, data.Awards);
-            
+
 
         });
 
-
-
-
+  
+    
 }
-
 
 // Submit button event listener
 submitButtonEl.addEventListener('click', sumbitSearchHandler);
-
-// Reset button event listener
-// Get help during office hours
-resetButtonEl.addEventListener('click', url);
 
 /*OMDB js ends*/
