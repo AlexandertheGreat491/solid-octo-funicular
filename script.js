@@ -67,8 +67,7 @@ var sumbitSearchHandler = function (event) {
     if (randomMovie === "Star Wars") {
         url = starwarsrequestUrl
     } else if (randomMovie === "Back to the Future") {
-        url = backtothefuturerequestUrl
-    }
+        url = backtothefuturerequestUrl }
      else if (randomMovie === "Batman") {
         url = batmanrequestUrl
     } else if (randomMovie === "Joker") {
