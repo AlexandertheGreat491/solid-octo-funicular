@@ -1,4 +1,3 @@
-
 // google programmable search engine api
 var searchInput
 var websitesEl = document.getElementById("websites");
@@ -7,12 +6,14 @@ var googleSearch = document.getElementById("google-search");
 
 // get from input data
 var googleFormHandler = function (event) {
+
     event.preventDefault();
     searchInput = googleSearch.value.trim();
     if (searchInput) {
         getGoogleData();
         googleSearch.value = "";
     }
+
 }
 
 // api fetch request 
@@ -34,7 +35,9 @@ var getGoogleData = function () {
                 websitesEl.appendChild(breakLine)
             }
         });
+
     });
+  });
 }
 
 // event listener
@@ -63,6 +66,7 @@ var conUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Con+Air"
 var diamondUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Blood+Diamond"
 // Movie urls end
 var submitButtonEl = document.querySelector('#submit');
+
 // Array of movies that can be displayed when the user clicks the submit button.
 var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Lord of the Rings', 'Ready Player One', 'Fury', 'Frozen', 'The Big Lebowski', 
 'Braveheart', 'The Book of Eli', 'California Typewriter', 'Dances with Wolves', 'Con Air', 'Blood Diamond'];
@@ -72,10 +76,10 @@ console.log(randomNumber)
 // Gets the selector for the section of the page where the results will be displayed.
 var movieDetailsEl = document.querySelector('#json');
 
-
 // Handles the json results after the Submit button is clicked by the user and then results are displayed in the html.
 
 var sumbitSearchHandler = function (event) {
+
     // Will use the url of a random movie.
     var url = '';
     var randomMovie = randomMovieArray[randomNumber]
@@ -210,13 +214,11 @@ var sumbitSearchHandler = function (event) {
 
         });
 
-
+  
+    
 }
-
 
 // Submit button event listener
 submitButtonEl.addEventListener('click', sumbitSearchHandler);
-
-
 
 /*OMDB js ends*/

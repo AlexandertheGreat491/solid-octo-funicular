@@ -2,7 +2,6 @@
 
 * {
   font-family: 'Josefin Sans', sans-serif;
-  
 }
 
 
@@ -11,6 +10,7 @@
 /*Article styling*/
 
 #lights-camera-action {
+
     background-color: #4d94ff;
     border: 0.625em groove #737373;
     border-radius: 1.5625em; 
@@ -18,17 +18,19 @@
 }
 
 label {
-    font-weight: bold;
-    color: #ffffff;
-    font-size: 0.9375em;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 0.9375em;
 }
 
 /*OMDB h1 element styling*/
 
 #movie {
+
     font-weight: bold;
     font-size: 1.875em;
     text-decoration: underline;
+
 }
 
 /*OMDB p element styling*/
@@ -50,6 +52,8 @@ margin-left: 0.625em;
 #submit {
     font-size: 1.125em;
     border-radius: 0.3125em;
+  font-weight: lighter;
+  font-size: 0.9375em;
 }
 
 #random {
@@ -77,9 +81,4 @@ margin-left: 0.625em;
     font-size: 1.25em; 
 }
 
-
 /*OMDB styling ends*/
-
-
-
-
