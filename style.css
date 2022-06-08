@@ -11,6 +11,32 @@
     object-fit: contain;
 }
 
+/* google search styling */
+
+#google-search-section {
+    background-color: coral;
+    border: 0.625em groove #737373;
+    border-radius: 1.5625em; 
+    padding: 1em;
+}
+
+#streaming-title {
+    font-weight: bold;
+    font-size: 1.875em;
+    text-decoration: underline;
+}
+
+#google-search-button {
+    border-radius: 0.3125em;
+}
+
+a {
+    color: black;
+}
+
+#movie-search-instructions {
+    text-align: center;
+}
 
 /*OMDB Styling starts*/
 
