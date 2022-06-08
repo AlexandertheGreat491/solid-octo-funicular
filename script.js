@@ -37,7 +37,6 @@ var getGoogleData = function () {
         });
 
     });
-  });
 }
 
 // event listener
