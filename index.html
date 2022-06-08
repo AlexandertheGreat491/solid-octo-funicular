@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
+
 
 <head>
 
@@ -16,7 +17,10 @@
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--Google Fonts-->
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500;700&display=swap"
+    rel="stylesheet">
   <!--Custom stylesheet-->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -27,6 +31,7 @@
     <h1>
       <a href="./index.html">Movie Nerds</a>
     </h1>
+    <!--nav starts-->
     <nav>
       <ul>
         <li>
@@ -40,29 +45,33 @@
         </li>
       </ul>
     </nav>
+    <!--nav ends-->
   </header>
-
-  <!--OMDB-->
-  <article class="col s12 m6" id="lights-camera-action">
-    <h1 id="movie">The Open Movie Database</h1>
+  
+  <!--OMDB starts-->
+  <article class="col s12 m6 l6 xl3" id="lights-camera-action">
+    <h1 class="center-align z-depth-3 #b2dfdb teal lighten-4" id="movie">The Open Movie Database</h1>
     <div class="row">
-      <div class="col s12 m6">
-        <div class="movie-container">
+      <div class="col s12 m6 l6 xl6">
+        <div id="random" class="left-align">
           <div class="col s12 m6" id="results-container">
-            <h2 id="results">Everything from OMDB </h2>
-            <p id="pun">Click the Submit button to get information about a random movie</p>
-            <button class="btn waves-effect waves-light btn-small" type="submit" id="submit">Submit<i
+            <h2 id="subheader">Everything from OMDB </h2>
+            <p id="pun">Click the Submit button to get information about a random movie, then to see another movie click refresh on your browser.</p>
+            <!--Submit button-->
+            <button class="btn waves-effect waves-light btn-small z-depth-4" type="submit" id="submit">Submit<i
                 class="fa-solid fa-play" id="play-button"></i></button>
-            <button class="btn waves-effect waves-light btn-small" type="reset" id="reset">Reset<i
-                class="fa-solid fa-backward" id="rewind"></i></button>
-            <!--movie information here-->
-            <pre id="json"></pre>
+            <div class="left-align" id="results">
+              <!--movie information here-->
+
+              <pre id="json"></pre>
+            </div
           </div>
         </div>
       </div>
   </article>
 
-  <!--google custom programmabe search engine api-->
+<!--OMBD ends-->
+  <!--google custom programmable search engine api starts-->
   <div class="col s12 m6">
     <h3>Streaming service search</h3>
     <p>search a movie to find a streaming service to watch on</p>
@@ -72,6 +81,8 @@
     </form>
     <div id="websites"></div>
   </div>
+  <!--google custom programmable search engine api ends-->
+
 
   <!--jQuery-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -84,4 +95,3 @@
 </body>
 
 </html>
-
