@@ -49,7 +49,7 @@ googleFormEl.addEventListener("submit", googleFormHandler)
 var batmanrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Batman&plot=full";
 var jokerrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Joker&plot=full"
 var starwarsrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Star+Wars&plot=full"
-var thepreciousUrl = "http://www.omdbapi.com/?apikey=5385144e&t=Lord+of+the+Rings&plot=full"
+var thepreciousUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Lord+of+the+Rings&plot=full"
 var submitButtonEl = document.querySelector('#submit');
 var resetButtonEl = document.querySelector('#reset');
 var randomMovieArray = ['Batman', 'Joker', 'Star Wars','Lord of the Rings'];
