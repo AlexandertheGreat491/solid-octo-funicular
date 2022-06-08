@@ -7,8 +7,8 @@
 
 /* movie poster slideshow styling */
 #movie-posters {
-    height: 300px;
-    width: 300px;
+    height: 500px;
+    width: 500px;
     object-fit: contain;
 }
 
