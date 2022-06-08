@@ -1,6 +1,56 @@
-body {
+/* General Page Styles */
+
+* {
   font-family: 'Josefin Sans', sans-serif;
-  ;
 }
 
-/* Header Styles */
+
+/*OMDB Styling starts*/
+
+/*Article styling*/
+#lights-camera-action {
+  background-color: #4d94ff;
+  border: 0.625em groove #737373;
+  border-radius: 1.25em;
+}
+
+label {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 0.9375em;
+}
+
+/*OMDB h1 element styling*/
+#movie {
+  font-weight: bold;
+  font-size: 1.5625em;
+  text-decoration: underline;
+}
+
+/*OMDB p element styling*/
+#pun {
+  font-weight: lighter;
+  font-size: 0.9375em;
+}
+
+/* Styling for icons in Search and Reset buttons*/
+#play-button,
+#rewind {
+  margin-left: 0.625em;
+}
+
+/* Search and Reset buttons styling*/
+#submit,
+#reset {
+  font-size: 1.125em;
+  border-radius: 0.3125em;
+}
+
+/* Styling for the div where user search results will display */
+#json {
+  font-weight: lighter;
+  font-size: 0.75em;
+  align-items: left;
+}
+
+/*OMDB styling ends*/
