@@ -50,9 +50,20 @@ var batmanrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Batman&plot=f
 var jokerrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Joker&plot=full"
 var starwarsrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Star+Wars&plot=full"
 var thepreciousUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Lord+of+the+Rings&plot=full"
+var playeroneUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Ready+Player+One"
+var furyUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Fury"
+var frozenUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Frozen"
+var lebowskiUrl = "https://www.omdbapi.com/?apikey=5385144e&t=The+Big+Lebowski"
+var braveUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Braveheart"
+var eliUrl = "https://www.omdbapi.com/?apikey=5385144e&t=The+Book+of+Eli"
+var californiaUrl = "https://www.omdbapi.com/?apikey=5385144e&t=California+Typewriter"
+var wolvesUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Dances+with+Wolves"
+var conUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Con+Air"
+var diamondUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Blood+Diamond"
 var submitButtonEl = document.querySelector('#submit');
 var resetButtonEl = document.querySelector('#reset');
-var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Lord of the Rings'];
+var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Lord of the Rings', 'Ready Player One', 'Fury', 'Frozen', 'The Big Lebowski', 
+'Braveheart', 'The Book of Eli', 'California Typewriter', 'Dances with Wolves', 'Con Air', 'Blood Diamond'];
 var randomNumber = Math.floor(Math.random() * randomMovieArray.length);
 console.log(randomNumber)
 var movieDetailsEl = document.querySelector('#json');
@@ -73,6 +84,26 @@ var sumbitSearchHandler = function (event) {
         url = batmanrequestUrl
     } else if (randomMovie === "Joker") {
         url = jokerrequestUrl
+    } else if (randomMovie === "Ready Player One") {
+        url = playeroneUrl
+    } else if (randomMovie === "Fury") {
+        url = furyUrl
+    } else if (randomMovie === "Frozen") {
+        url = frozenUrl
+    } else if (randomMovie === "The Big Lebowski") {
+        url = lebowskiUrl
+    } else if (randomMovie === "Braveheart") {
+        url = braveUrl
+    } else if (randomMovie === "The Book of Eli") {
+        url = eliUrl
+    } else if (randomMovie === "California Typewriter") {
+        url = californiaUrl 
+    } else if (randomMovie === "Dances with Wolves") {
+        url = wolvesUrl
+    } else if (randomMovie === "Con Air") {
+        url = conUrl
+    } else if (randomMovie === "Blood Diamond") {
+        url = diamondUrl
     }
 
 
