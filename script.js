@@ -174,8 +174,6 @@ var sumbitSearchHandler = function (event) {
         });
 
 
-
-
 }
 
 
