@@ -12,7 +12,7 @@
 #lights-camera-action {
     background-color: #4d94ff;
     border: 0.625em groove #737373;
-    border-radius: 1.25em; 
+    border-radius: 1.5625em; 
 }
 
 label {
@@ -24,8 +24,14 @@ label {
 /*OMDB h1 element styling*/
 #movie {
     font-weight: bold;
-    font-size: 1.5625em;
+    font-size: 1.875em;
     text-decoration: underline;
+}
+
+/*OMDB h2 element styling*/
+#results {
+    font-weight: 500;
+    font-size: 1.25em; 
 }
 
 /*OMDB p element styling*/
@@ -34,13 +40,13 @@ font-weight:lighter;
 font-size: 0.9375em;
 }
 
-/* Styling for icons in Search and Reset buttons*/
+/* Styling for icons in Search button*/
 #play-button, #rewind {
 margin-left: 0.625em;
 }
 
-/* Search and Reset buttons styling*/
-#submit, #reset {
+/* Search button styling*/
+#submit {
     font-size: 1.125em;
     border-radius: 0.3125em;
 }
