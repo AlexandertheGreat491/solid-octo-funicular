@@ -5,6 +5,13 @@
   
 }
 
+/* movie poster slideshow styling */
+#movie-posters {
+    height: 300px;
+    width: 300px;
+    object-fit: contain;
+}
+
 
 /*OMDB Styling starts*/
 
