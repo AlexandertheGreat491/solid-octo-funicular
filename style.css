@@ -13,6 +13,7 @@
     background-color: #4d94ff;
     border: 0.625em groove #737373;
     border-radius: 1.5625em; 
+    margin-top: 0.9375em;
 }
 
 label {
@@ -26,12 +27,6 @@ label {
     font-weight: bold;
     font-size: 1.875em;
     text-decoration: underline;
-}
-
-/*OMDB h2 element styling*/
-#results {
-    font-weight: 500;
-    font-size: 1.25em; 
 }
 
 /*OMDB p element styling*/
@@ -60,7 +55,19 @@ margin-left: 0.625em;
 #json {
     font-weight: 400;
     font-size: 0.75em;
-    align-items: left;
+}
+
+
+#results {
+    position: relative;
+    right: -43.75em;
+    top: -12.5em;
+    margin: 0.625em;
+}
+
+#subheader {
+    font-weight: 500;
+    font-size: 1.25em; 
 }
 
 
