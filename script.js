@@ -53,7 +53,7 @@ var backtothefuturerequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Back
 var submitButtonEl = document.querySelector('#submit');
 var resetButtonEl = document.querySelector('#reset');
 var randomMovieArray = ['Batman', 'Joker', 'Star Wars','Back to the Future'];
-var randomNumber = Math.floor(Math.random() * randomMovieArray.length) -1;
+var randomNumber = Math.floor(Math.random() * randomMovieArray.length);
 console.log(randomNumber)
 var movieDetailsEl = document.querySelector('#json');
 
