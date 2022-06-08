@@ -1,12 +1,12 @@
 
 // google programmable search engine api
-var searchInput 
+var searchInput
 var websitesEl = document.getElementById("websites");
 var googleFormEl = document.getElementById("google-form");
 var googleSearch = document.getElementById("google-search");
 
-    // get from input data
-var googleFormHandler = function(event) {
+// get from input data
+var googleFormHandler = function (event) {
     event.preventDefault();
     searchInput = googleSearch.value.trim();
     if (searchInput) {
@@ -15,11 +15,11 @@ var googleFormHandler = function(event) {
     }
 }
 
-    // api fetch request 
-var getGoogleData = function() {
+// api fetch request 
+var getGoogleData = function () {
     var apiUrl = "https://www.googleapis.com/customsearch/v1?key=AIzaSyAiib3CHEMRsVk3qS6ybJl6ffY8yOGf9ww&cx=26e4f40d5ac7281e0&q=" + searchInput;
-    fetch(apiUrl).then(function(response) {
-        response.json().then(function(data) {
+    fetch(apiUrl).then(function (response) {
+        response.json().then(function (data) {
             console.log(data);
             for (let i = 0; i < data.items.length; i++) {
                 // list each link 
@@ -41,7 +41,7 @@ var getGoogleData = function() {
 googleFormEl.addEventListener("submit", googleFormHandler)
 
 // end programmable google search   
-  
+
 /*OMDB js starts*/
 
 // Global variables
@@ -52,7 +52,7 @@ var starwarsrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Star+Wars&p
 var thepreciousUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Lord+of+the+Rings&plot=full"
 var submitButtonEl = document.querySelector('#submit');
 var resetButtonEl = document.querySelector('#reset');
-var randomMovieArray = ['Batman', 'Joker', 'Star Wars','Lord of the Rings'];
+var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Lord of the Rings'];
 var randomNumber = Math.floor(Math.random() * randomMovieArray.length);
 console.log(randomNumber)
 var movieDetailsEl = document.querySelector('#json');
@@ -67,8 +67,9 @@ var sumbitSearchHandler = function (event) {
     if (randomMovie === "Star Wars") {
         url = starwarsrequestUrl
     } else if (randomMovie === "Lord of the Rings") {
-        url = thepreciousUrl }
-     else if (randomMovie === "Batman") {
+        url = thepreciousUrl
+    }
+    else if (randomMovie === "Batman") {
         url = batmanrequestUrl
     } else if (randomMovie === "Joker") {
         url = jokerrequestUrl
@@ -153,9 +154,9 @@ var sumbitSearchHandler = function (event) {
             awardsEl.style.fontSize = "1.25em";
             awardsEl.innerHTML = movieAwards;
             movieDetailsEl.append(awardsEl);
-            
+
             // localStorage
-            
+
             localStorage.setItem(movieTitle, data.Title);
             localStorage.setItem(movieYear, data.Year);
             localStorage.setItem(releaseDate, data.Released);
@@ -168,7 +169,7 @@ var sumbitSearchHandler = function (event) {
             localStorage.setItem(movieLanguage, data.Language);
             localStorage.setItem(movieCountry, data.Country);
             localStorage.setItem(movieAwards, data.Awards);
-            
+
 
         });
 
