@@ -4,6 +4,13 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
+/* movie poster slideshow styling */
+#movie-posters {
+    height: 500px;
+    width: 500px;
+    object-fit: contain;
+}
+
 
 /*OMDB Styling starts*/
 
