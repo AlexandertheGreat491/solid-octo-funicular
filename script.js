@@ -46,6 +46,7 @@ googleFormEl.addEventListener("submit", googleFormHandler)
 
 // Global variables
 
+// Movie urls start
 var batmanrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Batman&plot=full";
 var jokerrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Joker&plot=full"
 var starwarsrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Star+Wars&plot=full"
@@ -60,21 +61,25 @@ var californiaUrl = "https://www.omdbapi.com/?apikey=5385144e&t=California+Typew
 var wolvesUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Dances+with+Wolves"
 var conUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Con+Air"
 var diamondUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Blood+Diamond"
+// Movie urls end
 var submitButtonEl = document.querySelector('#submit');
-var resetButtonEl = document.querySelector('#reset');
+// Array of movies that can be displayed when the user clicks the submit button.
 var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Lord of the Rings', 'Ready Player One', 'Fury', 'Frozen', 'The Big Lebowski', 
 'Braveheart', 'The Book of Eli', 'California Typewriter', 'Dances with Wolves', 'Con Air', 'Blood Diamond'];
+// Sets the number of movies to the length of the randomMovieArray.
 var randomNumber = Math.floor(Math.random() * randomMovieArray.length);
 console.log(randomNumber)
+// Gets the selector for the section of the page where the results will be displayed.
 var movieDetailsEl = document.querySelector('#json');
 
 
 // Handles the json results after the Submit button is clicked by the user and then results are displayed in the html.
 
 var sumbitSearchHandler = function (event) {
+    // Will use the url of a random movie.
     var url = '';
     var randomMovie = randomMovieArray[randomNumber]
-    // Conditions
+    // Conditional statements to display a random movie.
     if (randomMovie === "Star Wars") {
         url = starwarsrequestUrl
     } else if (randomMovie === "Lord of the Rings") {
@@ -106,6 +111,7 @@ var sumbitSearchHandler = function (event) {
         url = diamondUrl
     }
 
+// Extracts the json data into a format that is user-friendly.
 
     fetch(url)
         .then(function (response) {

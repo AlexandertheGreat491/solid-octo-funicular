@@ -9,6 +9,7 @@
 /*OMDB Styling starts*/
 
 /*Article styling*/
+
 #lights-camera-action {
     background-color: #4d94ff;
     border: 0.625em groove #737373;
@@ -23,6 +24,7 @@ label {
 }
 
 /*OMDB h1 element styling*/
+
 #movie {
     font-weight: bold;
     font-size: 1.875em;
@@ -30,18 +32,21 @@ label {
 }
 
 /*OMDB p element styling*/
+
 #pun {
 font-weight: 700;
 font-size: 0.9375em;
 font-style: oblique;
 }
 
-/* Styling for icons in Search button*/
+/* Styling for icons in Submit button*/
+
 #play-button {
 margin-left: 0.625em;
 }
 
-/* Search button styling*/
+/* Submit button styling*/
+
 #submit {
     font-size: 1.125em;
     border-radius: 0.3125em;
@@ -53,6 +58,7 @@ margin-left: 0.625em;
 }
 
 /* Styling for the div where user search results will display */
+
 #json {
     font-weight: 400;
     font-size: 0.75em;
