@@ -6,8 +6,8 @@
 
 /* movie poster slideshow styling */
 #movie-posters {
-    height: 500px;
-    width: 500px;
+    height: 18.75em;
+    width: 18.75em;
     object-fit: contain;
 }
 
@@ -24,10 +24,9 @@
     margin-top: 0.9375em;
 }
 
-label {
-  font-weight: bold;
-  color: #ffffff;
-  font-size: 0.9375em;
+#slideshow {
+    position: relative;
+    right: -21.875em;
 }
 
 /*OMDB h1 element styling*/
@@ -46,6 +45,8 @@ label {
 font-weight: 700;
 font-size: 0.9375em;
 font-style: oblique;
+position: relative;
+right: -21.875em;
 }
 
 /* Styling for icons in Submit button*/
@@ -57,10 +58,12 @@ margin-left: 0.625em;
 /* Submit button styling*/
 
 #submit {
-    font-size: 1.125em;
-    border-radius: 0.3125em;
+  font-size: 1.125em;
+   border-radius: 0.3125em;
   font-weight: lighter;
   font-size: 0.9375em;
+  position: relative;
+  right: -21.875em;
 }
 
 #random {
@@ -79,13 +82,15 @@ margin-left: 0.625em;
 #results {
     position: relative;
     right: -43.75em;
-    top: -12.5em;
+    top: -31.25em;
     margin: 0.625em;
 }
 
 #subheader {
     font-weight: 500;
     font-size: 1.25em; 
+    position: relative;
+    right: -17.5em;
 }
 
 /*OMDB styling ends*/
