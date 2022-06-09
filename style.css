@@ -55,11 +55,6 @@ a {
     padding: 1em;
 }
 
-#slideshow {
-    position: relative;
-    right: -21.875em;
-}
-
 /*OMDB h1 element styling*/
 
 #movie {
@@ -76,8 +71,6 @@ a {
 font-weight: 700;
 font-size: 0.9375em;
 font-style: oblique;
-position: relative;
-right: -21.875em;
 }
 
 /* Styling for icons in Submit button*/
@@ -93,8 +86,6 @@ margin-left: 0.625em;
    border-radius: 0.3125em;
   font-weight: lighter;
   font-size: 0.9375em;
-  position: relative;
-  right: -21.875em;
 }
 
 #random {
@@ -120,8 +111,6 @@ margin-left: 0.625em;
 #subheader {
     font-weight: 500;
     font-size: 1.25em; 
-    position: relative;
-    right: -17.5em;
 }
 
 /*OMDB styling ends*/
