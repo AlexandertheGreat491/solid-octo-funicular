@@ -4,6 +4,10 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
+main {
+    background-color: #8c8c8c;
+}
+
 /* movie poster slideshow styling */
 #movie-posters {
     height: 18.75em;
