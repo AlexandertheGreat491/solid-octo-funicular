@@ -12,7 +12,8 @@ Provide a short description explaining the what, why, and how of your project. U
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+[Repository](https://github.com/AlexandertheGreat491/solid-octo-funicular) |
+[Deployed URL](https://alexanderthegreat491.github.io/solid-octo-funicular/) 
 
 
 ## Collaborators
