@@ -12,6 +12,8 @@ Provide a short description explaining the what, why, and how of your project. U
 
 ## Usage
 
+Follow the links below to clone the repository to your local computer and launch the application. 
+
 [Repository](https://github.com/AlexandertheGreat491/solid-octo-funicular) |
 [Deployed URL](https://alexanderthegreat491.github.io/solid-octo-funicular/) 
 
