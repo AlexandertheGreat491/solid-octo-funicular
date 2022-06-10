@@ -14,7 +14,6 @@ Follow the links below to clone the repository to your local computer and launch
 [Deployed URL](https://alexanderthegreat491.github.io/solid-octo-funicular/) 
 
 
-
 ## Collaborators
 
 [Alex](https://github.com/AlexandertheGreat491) |
@@ -33,4 +32,5 @@ Follow the links below to clone the repository to your local computer and launch
 [JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript) | 
 [Materialize CSS & JS](https://materializecss.com/getting-started.html) | 
 [Open Movie Database API](https://www.omdbapi.com/) | 
-[StackOverflow](https://stackoverflow.com/questions/14725230/using-setinterval-for-image-slideshow
+[StackOverflow](https://stackoverflow.com/questions/14725230/using-setinterval-for-image-slideshow)  
+
