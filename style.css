@@ -15,6 +15,7 @@ header {
 
 nav {
   background-color:rgb(2, 99, 38);
+  box-shadow: none;
 }
 /* movie poster slideshow styling */
 #movie-posters {
