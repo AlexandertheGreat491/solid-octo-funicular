@@ -13,6 +13,7 @@ Follow the links below to clone the repository to your local computer and launch
 [Repository](https://github.com/AlexandertheGreat491/solid-octo-funicular) |
 [Deployed URL](https://alexanderthegreat491.github.io/solid-octo-funicular/) 
 
+![deployed application screenshot](https://user-images.githubusercontent.com/64184203/173090484-f0117a4b-bd70-4967-ad09-504db33ca28b.jpg)
 
 ## Collaborators
 
