@@ -4,10 +4,18 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
-main {
+body {
     background-color: #8c8c8c;
 }
 
+header {
+ background-color: rgb(2, 99, 38);
+ padding-top: 1em;
+}
+
+nav {
+  background-color:rgb(2, 99, 38);
+}
 /* movie poster slideshow styling */
 #movie-posters {
     height: 18.75em;
