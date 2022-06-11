@@ -4,7 +4,6 @@ var moviePostersEl = document.getElementById("movie-posters");
 var movieIndex = 0;
 var moviePosters = ["https://www.thewrap.com/wp-content/uploads/2022/01/The-Batman-Poster-Bat-and-Cat.jpg", //batman 
 "https://m.media-amazon.com/images/I/81H7xFCTwrL._AC_SL1500_.jpg", //joker
-"https://m.media-amazon.com/images/I/81EBp0vOZZL._AC_SY741_.jpg",  //lotr
 "https://m.media-amazon.com/images/I/618stJ-jeAL._AC_SY679_.jpg",  //ready player one
 "https://m.media-amazon.com/images/I/911oYnatToL._AC_SY679_.jpg", // fury
 "https://lumiere-a.akamaihd.net/v1/images/p_frozen_18373_3131259c.jpeg", // frozen
@@ -82,7 +81,6 @@ googleFormEl.addEventListener("submit", googleFormHandler)
 var batmanrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Batman&plot=full";
 var jokerrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Joker&plot=full"
 var starwarsrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Star+Wars&plot=full"
-var thepreciousUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Lord+of+the+Rings&plot=full"
 var playeroneUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Ready+Player+One"
 var furyUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Fury"
 var frozenUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Frozen"
@@ -97,7 +95,7 @@ var diamondUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Blood+Diamond"
 var submitButtonEl = document.querySelector('#submit');
 
 // Array of movies that can be displayed when the user clicks the submit button.
-var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Lord of the Rings', 'Ready Player One', 'Fury', 'Frozen', 'The Big Lebowski', 
+var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Ready Player One', 'Fury', 'Frozen', 'The Big Lebowski', 
 'Braveheart', 'The Book of Eli', 'California Typewriter', 'Dances with Wolves', 'Con Air', 'Blood Diamond'];
 // Sets the number of movies to the length of the randomMovieArray.
 var randomNumber = Math.floor(Math.random() * randomMovieArray.length);
@@ -115,10 +113,7 @@ var sumbitSearchHandler = function (event) {
     // Conditional statements to display a random movie.
     if (randomMovie === "Star Wars") {
         url = starwarsrequestUrl
-    } else if (randomMovie === "Lord of the Rings") {
-        url = thepreciousUrl
-    }
-    else if (randomMovie === "Batman") {
+    } else if (randomMovie === "Batman") {
         url = batmanrequestUrl
     } else if (randomMovie === "Joker") {
         url = jokerrequestUrl
