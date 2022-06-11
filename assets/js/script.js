@@ -1,3 +1,32 @@
+
+//movie poster slideshow
+var moviePostersEl = document.getElementById("movie-posters");
+var movieIndex = 0;
+var moviePosters = ["https://www.thewrap.com/wp-content/uploads/2022/01/The-Batman-Poster-Bat-and-Cat.jpg", //batman 
+"https://m.media-amazon.com/images/I/81H7xFCTwrL._AC_SL1500_.jpg", //joker
+"https://m.media-amazon.com/images/I/618stJ-jeAL._AC_SY679_.jpg",  //ready player one
+"https://m.media-amazon.com/images/I/911oYnatToL._AC_SY679_.jpg", // fury
+"https://lumiere-a.akamaihd.net/v1/images/p_frozen_18373_3131259c.jpeg", // frozen
+"https://cdn.shopify.com/s/files/1/1057/4964/products/The-Big-Lebowski-Vintage-Movie-Poster-Original-German-A1-23x33-6297_800x.progressive.jpg?v=1642107625", // the big lebowski
+"https://m.media-amazon.com/images/M/MV5BMzkzMmU0YTYtOWM3My00YzBmLWI0YzctOGYyNTkwMWE5MTJkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg", // braveheart
+"https://m.media-amazon.com/images/M/MV5BNTE1OWI1YzgtZjEyMy00MjQ4LWE0NWMtYTNhYjc0ZDQ3ZGRkXkEyXkFqcGdeQXVyNDQ2MTMzODA@._V1_.jpg", // the book of eli
+"https://m.media-amazon.com/images/M/MV5BOTU4MTQ4MDUtN2Q5OS00OWFiLWFmNDYtODJlY2MxM2ZmMjk0XkEyXkFqcGdeQXVyMTc3MTc5Nw@@._V1_FMjpg_UX1000_.jpg", // california typewriter
+"https://www.goldenglobes.com/sites/default/files/articles/cover_images/1991-dances-with-wolves.jpg?format=pjpg&auto=webp&optimize=high&width=850", // dances with wolves
+"https://m.media-amazon.com/images/I/61y8OhHDGsL._AC_SL1000_.jpg", // con air
+"https://m.media-amazon.com/images/I/51jOU6oCysL._AC_.jpg", // blood diamond
+]
+    // this function taken from stackoverflow thread https://stackoverflow.com/questions/14725230/using-setinterval-for-image-slideshow
+var moviePosterSlideshow = function() {
+         moviePostersEl.src = moviePosters[movieIndex];
+         movieIndex++;
+         if (movieIndex >= moviePosters.length) {
+             movieIndex = 0;
+         }
+}
+
+setInterval(moviePosterSlideshow, 5000);
+
+
 // google programmable search engine api
 var searchInput
 var websitesEl = document.getElementById("websites");
@@ -37,7 +66,6 @@ var getGoogleData = function () {
         });
 
     });
-  });
 }
 
 // event listener
@@ -53,7 +81,6 @@ googleFormEl.addEventListener("submit", googleFormHandler)
 var batmanrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Batman&plot=full";
 var jokerrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Joker&plot=full"
 var starwarsrequestUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Star+Wars&plot=full"
-var thepreciousUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Lord+of+the+Rings&plot=full"
 var playeroneUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Ready+Player+One"
 var furyUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Fury"
 var frozenUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Frozen"
@@ -68,7 +95,7 @@ var diamondUrl = "https://www.omdbapi.com/?apikey=5385144e&t=Blood+Diamond"
 var submitButtonEl = document.querySelector('#submit');
 
 // Array of movies that can be displayed when the user clicks the submit button.
-var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Lord of the Rings', 'Ready Player One', 'Fury', 'Frozen', 'The Big Lebowski', 
+var randomMovieArray = ['Batman', 'Joker', 'Star Wars', 'Ready Player One', 'Fury', 'Frozen', 'The Big Lebowski', 
 'Braveheart', 'The Book of Eli', 'California Typewriter', 'Dances with Wolves', 'Con Air', 'Blood Diamond'];
 // Sets the number of movies to the length of the randomMovieArray.
 var randomNumber = Math.floor(Math.random() * randomMovieArray.length);
@@ -86,10 +113,7 @@ var sumbitSearchHandler = function (event) {
     // Conditional statements to display a random movie.
     if (randomMovie === "Star Wars") {
         url = starwarsrequestUrl
-    } else if (randomMovie === "Lord of the Rings") {
-        url = thepreciousUrl
-    }
-    else if (randomMovie === "Batman") {
+    } else if (randomMovie === "Batman") {
         url = batmanrequestUrl
     } else if (randomMovie === "Joker") {
         url = jokerrequestUrl
